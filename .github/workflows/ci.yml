@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y junit4 libhamcrest-java
+    - name: Run server tests
+      run: |
+        cd server
+        ./run_tests.sh
+    - name: Run client tests
+      run: |
+        cd client
+        node test.js
