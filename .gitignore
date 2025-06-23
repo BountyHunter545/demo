@@ -1,0 +1,8 @@
+node_modules/
+*.log
+mvn_test.log
+npm_init.log
+npm_install.log
+npm_express.log
+apt_junit.log
+server/target/
