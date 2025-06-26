@@ -1,4 +1,6 @@
-package com.example.todo;
+package com.example.todo.service;
+
+import com.example.todo.domain.TodoItem;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -6,6 +8,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class TodoService {
     private final AtomicLong idCounter = new AtomicLong();
     private final List<TodoItem> items = new ArrayList<>();

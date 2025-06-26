@@ -2,6 +2,9 @@ package com.example.todo;
 
 import static org.junit.Assert.*;
 
+import com.example.todo.domain.TodoItem;
+import com.example.todo.service.TodoService;
+
 import org.junit.Test;
 
 public class TodoServiceTest {

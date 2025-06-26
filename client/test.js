@@ -3,7 +3,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 
 async function run() {
-  const server = spawn('java', ['-cp', path.join('..', 'server', 'target', 'test-classes'), 'com.example.todo.Main']);
+  const server = spawn('java', ['-cp', path.join('..', 'server', 'target', 'test-classes'), 'com.example.todo.Application']);
   await new Promise(r => setTimeout(r, 500));
   try {
     let res = await fetch('http://localhost:8080/api/todos');

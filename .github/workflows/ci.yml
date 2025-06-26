@@ -13,7 +13,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y junit4 libhamcrest-java
+        sudo apt-get install -y maven nodejs npm
     - name: Run server tests
       run: |
         cd server

@@ -1,13 +1,13 @@
 # Todo Prototype
 
-This repository contains a simple in-memory todo service implemented with a plain Java HTTP server and a small React UI served by Node.js.
+This repository contains a simple in-memory todo service implemented with Spring Boot and a small React UI served by Node.js. The REST API is defined using OpenAPI in `schemas/todo-api.yaml` and an interface is generated via the `openapi-generator-maven-plugin`.
 
 ## Running the backend
 
 ```bash
 cd server
-./run_tests.sh # builds classes and runs unit/integration tests
-java -cp target/test-classes com.example.todo.Main
+./run_tests.sh # executes `mvn test`
+mvn spring-boot:run
 ```
 
 ## Running the frontend
